@@ -1,0 +1,324 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Strong Cyan: hsl(171, 66%, 44%)
+- Light Blue: hsl(233, 100%, 69%)
+
+### Neutral
+
+- Dark Grayish Blue: hsl(210, 10%, 33%)
+- Grayish Blue: hsl(201, 11%, 66%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Fonts
+
+- Family: [Bai Jamjuree](https://fonts.google.com/specimen/Bai+Jamjuree)
+- Weights: 400, 600
+
+## Icons
+
+For the social icons, you can use the SVGs provided or a font icon library. Some font icon library suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com) */
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+
+  
+*,*::before,*::after{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+
+}
+:root{
+  /* ### Primary */
+
+--Strong-Cyan: hsl(171, 66%, 44%);
+--Light-Blue: hsl(233, 100%, 69%);
+
+/* ### Neutral */
+
+--Dark-Grayish-Blue: hsl(210, 10%, 33%);
+--Grayish-Blue: hsl(201, 11%, 66%);
+--footer-clr: hsl(201, 34%, 85%);
+
+/* button shadows */
+--btn-shdow-Cyan: hsl(171, 66%, 35%);
+--btn-shdow-blue: hsl(233, 100%, 60%);
+
+/* font weights */
+--normal-font-weight:400;
+--lightly-bold-font:600;
+}
+body{
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size:1.125rem;
+  text-align:center;
+  background-image:url(images/bg-header-mobile.png);
+  background-repeat:no-repeat;
+  background-size:100%;
+}
+h1,h2{
+  color:var(--Dark-Grayish-Blue)
+}
+p{
+  line-height:2;
+  color:var(--Grayish-Blue)
+}
+ul{
+  list-style:none;
+}
+a{
+  text-decoration:none;
+  display:block;
+}
+
+/* anchor links to applications download file */
+
+.clipboard_app_links a{
+  color:white;
+  font-weight:var(--lightly-bold-font);
+  padding:1rem 1rem;
+  border-radius:2rem;
+ 
+}
+.clipboard_app_links a:first-child{
+background-color:var(--Strong-Cyan);
+box-shadow: 0px 2.5px 0px 1px var(--btn-shdow-Cyan);
+}
+
+.clipboard_app_links a:last-child{
+background-color:var(--Light-Blue);
+box-shadow: 0px 2.5px 0px 1px var(--btn-shdow-blue);
+}
+
+
+img{
+  max-width: 100%;
+  display:block;
+  margin:auto;
+}
+.images_of_devices{
+  width:calc(100% - 2rem);
+  margin-block:1.5rem;
+}
+
+.grid{
+  display:grid;
+  }
+
+.ex-sm-row-spacing{
+  row-gap:1rem;
+}
+.sm-row-spacing{
+    row-gap:1.5rem;
+  }
+.med-row-spacing{
+  row-gap:2rem;
+}
+.lg-row-spacing{
+    row-gap:10rem;
+  }
+  
+ 
+
+article{
+  --normal-m1:1rem;
+  padding:8rem 2rem;
+}
+
+.article_header > h1{
+  font-size:2rem;
+  margin-top:var(--normal-m1);
+  }
+
+.key_hightlights div:nth-child(1){
+  margin-bottom:1.5rem;
+}
+.key_hightlights img{
+  margin-block:2rem;
+}
+
+.company_logos div{
+ margin-block:3.5rem;
+}
+
+.app_reference .clipboard_app_links{
+  margin-top:var(--normal-m1);
+}
+
+footer{
+  padding-block:4rem;
+  background-color:hsl(201deg 18% 97%);
+
+}
+footer > ul img{
+  width:12%;
+  margin-bottom:2rem;
+}
+
+.social_links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:1rem;
+}
+
+
+@media(min-width:730px){
+
+  body{
+    background-image:url(images/bg-header-desktop.png);
+  }
+  .article_header,
+  .app_reference,
+  .about_service>h2,
+  .about_service>p,
+  .service_benefits>h2,
+  .service_benefits>p{
+    max-width:700px;
+    margin:auto;
+  }
+  .article_header h1{
+    font-size:2.5rem;
+  }
+  .article_header p{
+    padding-inline:2rem;
+  }
+  .clipboard_app_links{
+    display:flex;
+    justify-content:center;
+    gap:1.5rem;
+  }
+  .clipboard_app_links a{
+    padding:1rem 2.5rem;
+  }
+  
+   .key_pts_txt div+div{
+    margin-top:3rem;
+   }
+  .service_benefits .images_of_devices{
+    width:60%;
+    margin-block:2.5rem;
+  }
+  .key_hightlights{
+    display:flex;
+    flex-flow:row wrap;
+    align-items:start;
+    padding-inline:3rem;
+    
+  }
+  .key_hightlights div:first-child{
+    flex:0 0 100%;
+  }
+  .key_hightlights div:not(.key_hightlights div:first-child){
+    flex:1;
+    padding-inline:2rem;
+  }
+  .company_logos{
+    display:flex;
+    justify-content:space-evenly;
+  }
+
+  footer{
+    grid-template-columns: 1fr 0.5fr;
+      }
+  footer.grid ul{
+    text-align:left;
+    display:flex;
+    justify-content:center;
+    gap:4rem;
+     }
+  
+  footer.grid ul div > li + li{
+    margin-top:1rem;
+  }
+    
+  footer.grid ul img{
+    width:30%;
+    margin-top:1rem;
+    margin-bottom:0;
+  }
+
+}
+@media(min-width:730px)and (max-width:1000px){
+   .service_key_pts{
+    display:flex;
+    align-items:center;
+    gap:3rem;
+    text-align:left;
+    margin-top:4rem;
+  }
+  .service_key_pts div:nth-child(1){
+    flex:1;
+  }
+  .service_key_pts img{
+    width:100%;
+    margin-top:0;
+    transform:translateX(-70px);
+      }
+    
+   .key_pts_txt{
+    width:26%;
+   }
+}
+@media(min-width:1000px){
+  .service_key_pts{
+    display:flex;
+    align-items:center;
+    gap:3rem;
+    text-align:left;
+    margin-top:4rem;
+  }
+  .service_key_pts div:nth-child(1){
+    flex:initial;
+  }
+  .service_key_pts img{
+    width:100%;
+    margin-top:0;
+    transform:translateX(-70px);
+      }
+    
+   .key_pts_txt{
+    width:26%;
+   }
+}
+
+@media(max-width:730px){
+  footer.grid ul{
+   row-gap:0;
+  }
+  footer.grid li{
+   margin-bottom:1rem;
+  }
+}
+
+/* hover state for buttons and links */
+
+
+.clipboard_app_links a:hover{
+    opacity:0.9;
+}
+
+footer li a:hover{
+  color:var(--Strong-Cyan)
+}
