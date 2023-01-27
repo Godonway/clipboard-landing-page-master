@@ -322,3 +322,7 @@ footer > ul img{
 footer li a:hover{
   color:var(--Strong-Cyan)
 }
+
+footer a{
+  color:var(--Dark-Grayish-Blue);
+}
